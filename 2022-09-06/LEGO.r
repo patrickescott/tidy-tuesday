@@ -83,7 +83,7 @@ total_sets <- sets %>%
   group_by(decade) %>%
   count()
 
-# Join the two dataframes above and plot % of large plots per decade
+# Join the two dataframes above and plot % of large sets per decade
 lego_large %>%
   left_join(total_sets) %>%
   mutate(pct_large = large/n*100) %>%
